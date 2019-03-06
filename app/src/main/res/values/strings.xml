@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">FuelTracking</string>
+    <string-array name="vehicle_type">
+        <item>Two Wheeler</item>
+        <item>Three wheeler</item>
+        <item>Four Wheeler</item>
+        <item>Commercial Vehicles</item>
+        <item>Trucks </item>
+        <item>Heavy Duty Vehicles</item>
+
+    </string-array>
+    <string-array name="fuel_type">
+        <item>Normal Petrol</item>
+        <item>Premium Petrol</item>
+        <item>Normal Diesel</item>
+        <item>Premium Diesel</item>
+    </string-array>
+</resources>
+
