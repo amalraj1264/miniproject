@@ -1,5 +1,6 @@
 package com.example.fueltracking;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,7 +12,7 @@ import android.widget.Toast;
 public class UserDetails extends AppCompatActivity {
     EditText vno,milage,tankcapacity;
     Spinner vtype,ftype;
-    Button submit;
+    Button submit,home;
     String strVno,Vmilage,strtankCapacity,strVtype,strFtype;
     UserDetailsDB userDetailsDB;
     @Override
@@ -26,6 +27,7 @@ public class UserDetails extends AppCompatActivity {
         vtype=(Spinner)findViewById(R.id.vehicleType);
         ftype=(Spinner)findViewById(R.id.vehicleType);
         submit=(Button)findViewById(R.id.submitbut);
+        home=(Button)findViewById(R.id.homebut);
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,5 +49,14 @@ public class UserDetails extends AppCompatActivity {
                 }
             }
         });
+
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(getApplicationContext(),HomeActivity.class);
+                startActivity(i);
+            }
+        });
+
     }
 }
