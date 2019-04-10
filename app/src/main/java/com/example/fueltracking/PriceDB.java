@@ -47,4 +47,22 @@ public class PriceDB extends SQLiteOpenHelper {
             return true;
         }
     }
+//    public boolean updatedata(String id,String petrol,String diesel)
+//    {
+//        SQLiteDatabase db=this.getWritableDatabase();
+//        ContentValues cv=new ContentValues();
+//        cv.put("col2",petrol);
+//        cv.put("col3",diesel);
+//        long status=db.update(Tablename,cv,col1+"="+0,null);
+//        if (status==-1)
+//        {
+//            return false;
+//        }
+//        else
+//        {
+//            return true;
+//        }
+//    }
+    
+
 }

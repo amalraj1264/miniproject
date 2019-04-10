@@ -1,5 +1,6 @@
 package com.example.fueltracking;
 
+import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,7 +12,7 @@ public class AdminActivity extends AppCompatActivity {
     EditText PetrolPrice,DieselPrice;
     Button Update,Submit;
     PriceDB priceDB;
-    String petrolP,dieselP;
+    String petrolP,dieselP,getId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +24,7 @@ public class AdminActivity extends AppCompatActivity {
         DieselPrice=(EditText)findViewById(R.id.dieselEdit);
         Update=(Button) findViewById(R.id.UpdateBut);
         Submit=(Button)findViewById(R.id.SubmitBut);
-        ;
+
         Submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,6 +44,24 @@ public class AdminActivity extends AppCompatActivity {
 
             }
         });
+//        Update.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                petrolP=PetrolPrice.getText().toString();
+//                dieselP=DieselPrice.getText().toString();
+//                boolean status=priceDB.updatedata("1",petrolP,dieselP);
+//                if(status==true)
+//                {
+//                    Toast.makeText(getApplicationContext(),"Successfully Updated",Toast.LENGTH_SHORT).show();
+//
+//                }
+//                else
+//                {
+//                    Toast.makeText(getApplicationContext(),"Error",Toast.LENGTH_SHORT).show();
+//
+//                }
+//            }
+//        });
     }
 
 }
